@@ -21,8 +21,8 @@ class MiNav extends HTMLElement {
     this.ul =
       this.querySelector("ul");
     getAuth().onAuthStateChanged(
-      usuario => this.
-        cambiaUsuario(usuario),
+      Asegurado => this.
+        cambiaUsuario(Asegurado),
       muestraError);
   }
 
@@ -30,7 +30,7 @@ class MiNav extends HTMLElement {
    * @param {import(
       "../lib/tiposFire.js").User}
       usu */
-      async cambiaUsuario(usu) {
+      async cambiaAsegurado(usu) {
         if (usu && usu.email) {
           let html = "";
           const roles =
