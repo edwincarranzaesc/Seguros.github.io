@@ -18,14 +18,14 @@ import {
 import {
   checksRoles,
   guardaAsegurado,
-  selectAlumnos
+  selectSeguros
 } from "./CtrlAsegurados";
 
 const params =
   new URL(location.href).
     searchParams;
 const id = params.get("id");
-const daoUsuario = getFirestore().
+const daoAsegurado = getFirestore().
   collection("Asegurado");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
@@ -54,7 +54,7 @@ async function busca() {
       forma.cue.value = id || "";
       img.src =
         await urlStorage(id);
-      selectAlumnos(
+      selectSeguros(
         forma.SeguroId,
         data.SeguroId)
       checksRoles(
@@ -67,7 +67,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraUsuarios();
+    muestraAsegurados();
   }
 }
 
@@ -81,7 +81,7 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoUsuario.
+      await daoAsegurado.
         doc(id).delete();
       await eliminaStorage(id);
       muestraAsegurados();
