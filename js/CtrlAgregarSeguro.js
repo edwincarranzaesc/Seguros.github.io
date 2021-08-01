@@ -21,9 +21,6 @@ const forma = document["forma"];
 getAuth().onAuthStateChanged(
   protege, muestraError);
 
-/** @param {import(
-    "../lib/tiposFire.js").User}
-    usuario */
 async function protege(Asegurado) {
   if (tieneRol(Asegurado,
     ["Administrador"])) {
@@ -51,7 +48,7 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Alumno} */
+                } */
     const modelo = {
       matricula,
       nombre,
