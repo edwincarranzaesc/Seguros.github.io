@@ -80,7 +80,7 @@ export async function
         Usuario} */
     const data = doc.data();
     return new Set(
-      data.rolIds || []);
+      data.rollds || []);
   } else {
     return new Set();
   }
