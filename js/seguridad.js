@@ -29,7 +29,7 @@ export async function
     { prompt: "select_account" });
   await getAuth().
     signInWithRedirect(provider);
-
+}
 
 /** @param {import(
     "../lib/tiposFire.js").User}
@@ -80,7 +80,7 @@ export async function
         Usuario} */
     const data = doc.data();
     return new Set(
-      data.rollds || []);
+      data.rolIds || []);
   } else {
     return new Set();
   }
