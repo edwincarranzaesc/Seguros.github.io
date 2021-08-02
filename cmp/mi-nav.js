@@ -22,7 +22,7 @@ class MiNav extends HTMLElement {
       this.querySelector("ul");
     getAuth().onAuthStateChanged(
       Asegurado => this.
-        cambiaUsuario(Asegurado),
+        cambiaAsegurado(Asegurado),
       muestraError);
   }
 
@@ -68,3 +68,4 @@ class MiNav extends HTMLElement {
 
 customElements.define(
   "mi-nav", MiNav);
+
