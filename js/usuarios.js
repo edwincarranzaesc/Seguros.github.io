@@ -9,7 +9,7 @@ import {
 } from "../lib/util.js";
 import {
   muestraAsegurados,
-  muestraUsuarios
+  muestraAsegurados
 } from "./navegacion.js";
 
 const SIN_SEGUROS = /* html */
@@ -33,7 +33,7 @@ export function
   selectSeguros(select,
     valor) {
   valor = valor || "";
-  daoAlumno.
+  daoSeguro.
     orderBy("nombre").
     onSnapshot(
       snap => {
@@ -144,7 +144,7 @@ export function
  * @param {FormData} formData
  * @param {string} id  */
 export async function
-  guardaUsuario(evt, formData,
+  guardaAsegurado(evt, formData,
     id) {
   try {
     evt.preventDefault();
@@ -167,3 +167,4 @@ export async function
     muestraError(e);
   }
 }
+
