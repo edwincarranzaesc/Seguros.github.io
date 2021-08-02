@@ -7,7 +7,7 @@ import {
 } from "../lib/util.js";
 
 const firestore = getFirestore();
-const daoUsuario = firestore.
+const daoAsegurado = firestore.
   collection("Asegurado");
 
 export async function
@@ -70,7 +70,7 @@ export async function
 export async function
   cargaRoles(email) {
   let doc =
-    await daoUsuario.
+    await daoAsegurado.
       doc(email).
       get();
   if (doc.exists) {
