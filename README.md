@@ -1,1 +1,1 @@
-# Seguros.github.io
+# segurosed.github.io
